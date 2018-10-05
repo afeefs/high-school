@@ -1,0 +1,67 @@
+game
+	start off with set amount of lives, can get more by collecting special items
+	travel through levels and beat boss to win game
+levels
+	go to next level by reaching the rightmost side of current level and/or completed objective
+	some levels have enemies, others have challenges
+	can return to previous levels
+	after all levels are complete, player enter boss battle to win game
+
+objectives
+	collect special objects (like coins)
+	traverse level without dying to obstacle
+
+obstacles
+	spikes
+	pits
+
+enemies
+	ranged
+	melee
+		roamer
+	tank
+	boss
+
+animation 
+	any movement must be animated
+	player avatar may be animated
+	enemies must be animated
+	level events must be animated (blocks moving)
+
+player input
+	WASD or arrow keys for movement (maybe use mouse to complete challenges or shoot), other keys to use inventory, check map
+
+map
+	shows levels and details about levels (if you have to go back and get items)
+
+requirements
+	animation or graphical interface
+		player avatar, enemies, level events must be animated. entire game will be a graphic
+	autoboxing/unboxing with wrapper classes
+		used when creating advanced data structures of primitive types
+	generics/"for each" used somewhere in code
+		used to traverse linear data structures like inventory or enemy spawns
+	if else statements and while/for loop with iterators
+		if else
+			check for level complete, collision, player input
+		while/for loop
+			same purpose as generic loop but for specific instances
+	arraylist/linkedlist/stack or queue must be used at least once in the code and it must be traversed or completely popped/dequeued
+		inventory, enemy spawning, level storage, event triggering
+	at least 1 interface and 3 classes
+		movable, displayable, collision interfaces. player class, basic block class, enemy class, abstract entity class, level class
+	interaction between all four classes/interfaces
+		player and enemy extend entity which along with basic block implements all interfaces. level stores entities and basic blocks. 
+	inheritance hierarchy must be implemented with the student designed classes
+		moveable, displayable, collision
+			entity
+				player
+				enemy
+			block
+			level
+				-block
+				-entity
+	polymorphism
+		player and enemy are entities, all building blocks for the levels will extend block and be called in a loop to display them all from a data structure of type block
+	treemap
+		relates player input to actions in game (wasd to movement)

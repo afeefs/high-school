@@ -1,0 +1,21 @@
+void Castle(){
+  noStroke();
+  rectMode(CENTER);
+  fill(255);
+  rect(width/2,height,400,300);
+  rect(width-800,height,100,500);
+  rect(width/2+200,height,100,500);
+  fill(#2AF271);
+  beginShape();
+  vertex(width-800,height-300);
+  vertex(width-900,height-250);
+  vertex(width-700,height-250);
+  endShape();
+  beginShape();
+  vertex(width/2+200,height-300);
+  vertex(width/2+100,height-250);
+  vertex(width/2+300,height-250);
+  endShape();
+  fill(#2AE0F2);
+  rect(width/2+10,height,75,200);
+}
